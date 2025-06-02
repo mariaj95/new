@@ -5,7 +5,7 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    
+
     steps:
       # 1. Configurar Node.js
       - name: Setup Node.js
@@ -27,4 +27,6 @@ jobs:
         with:
           build: npm run build
           start: npm start
-          wait-on: 'http://localhost:5000'
+          wait-on: 'http://localhost:8080'
+        
+    
