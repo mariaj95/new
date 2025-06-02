@@ -1,0 +1,30 @@
+name: Cypress tests
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Configurar Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      # 2. Obtener el código
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      # 3. Instalar dependencias
+      - name: Install dependencies
+        run: npm install
+        
+      # 4. Ejecutar Cypress
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm start
+          wait-on: 'http://localhost:5000'
