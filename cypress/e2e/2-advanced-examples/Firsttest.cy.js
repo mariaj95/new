@@ -42,11 +42,6 @@ context('My First test', () => {
     //     })
     // })
 
-    // it('sets and gets a token from local storage', () =>{
-    //     cy.setLocalStorage('token', token)
-    //     cy.getLocalStorage('token').should('eq', token)
-    // })
-
     // it('overwrites the type command by using sensisitive characters', () =>{
     //     cy.visit('/commands/actions')
     //     cy.findByPlaceholderText('Email').type('test@email.com')
