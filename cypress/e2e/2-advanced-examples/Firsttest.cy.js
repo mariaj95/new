@@ -3,7 +3,6 @@
 //@ts-nocheck
 
 //const navbarText = Cypress.env('navbarText');
-// const token = 'abc123'
 
 context('My First test', () => {
     beforeEach(() => {
