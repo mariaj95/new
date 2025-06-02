@@ -21,12 +21,14 @@ context('My First test', () => {
     })
 
     it('can double click to edit', () => {
-        cy.get('.action-div').dblclick().should('not.be.visible')
+        cy.get('.action-div').dblclick()
+        cy.get('.action-div').should('not.be.visible')
         cy.get('.action-input-hidden').should('be.visible')
     })
 
     it('right click to edit', () =>{
-        cy.get('.rightclick-action-div').rightclick().should('not.be.visible')
+        cy.get('.rightclick-action-div').rightclick()
+        cy.get('.rightclick-action-div').should('not.be.visible')
         cy.get('.rightclick-action-input-hidden').should('be.visible')
     })
 
