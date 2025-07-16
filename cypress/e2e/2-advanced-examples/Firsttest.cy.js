@@ -6,7 +6,7 @@
 
 context('My First test', () => {
     beforeEach(() => {
-        cy.visit('/commands/Actions')
+        cy.visit('/commands/actions')
     })
 
     it('triggers a popover on click', () =>{
