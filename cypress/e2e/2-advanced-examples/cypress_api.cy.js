@@ -75,6 +75,7 @@ context('Cypress APIs', () => {
       let myConfig = Cypress.config()
 
       expect(myConfig).to.have.property('animationDistanceThreshold', 5)
+      // Comentado porque ahora el proyecto sí tiene baseUrl definido en cypress.config.js
       // expect(myConfig).to.have.property('baseUrl', null)
       expect(myConfig).to.have.property('defaultCommandTimeout', 4000)
       expect(myConfig).to.have.property('requestTimeout', 5000)
